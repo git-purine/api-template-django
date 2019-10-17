@@ -1,0 +1,16 @@
+[MASTER]
+init-hook="import sys; sys.path.insert(0, './django');"
+jobs=4
+
+[MESSAGES CONTROL]
+disable=
+  attribute-defined-outside-init,
+  bad-continuation,
+  bad-indentation,
+  invalid-name,
+  line-too-long,
+  missing-docstring,
+  too-few-public-methods,
+  unsubscriptable-object,
+  useless-return,
+  wrong-import-order,

@@ -1,0 +1,13 @@
+# directory
+.mypy_cache
+.pytest_cache
+.venv
+.vscode
+**/__pycache__
+htmlcov
+
+# file
+**/*.log*
+**/.DS_Store
+.coverage
+

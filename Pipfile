@@ -1,0 +1,23 @@
+[[source]]
+name = "pypi"
+url = "https://pypi.org/simple"
+verify_ssl = true
+
+[dev-packages]
+autopep8 = "*"
+mypy = "*"
+ptvsd = "*"
+pytest = "*"
+pytest-cov = "*"
+pytest-env = "*"
+pytest-mock = "*"
+
+[packages]
+django = "*"
+djangorestframework = "*"
+boto3 = "*"
+psycopg2-binary = "*"
+ulid-py = "*"
+
+[requires]
+python_version = "3.7"
