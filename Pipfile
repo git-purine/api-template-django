@@ -11,6 +11,7 @@ pytest = "*"
 pytest-cov = "*"
 pytest-env = "*"
 pytest-mock = "*"
+pylint = "*"
 
 [packages]
 django = "*"
