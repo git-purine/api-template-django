@@ -11,6 +11,7 @@ import os
 
 from django.core.wsgi import get_wsgi_application
 
-os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'api.settings')
+rack = os.environ.get('RACK_ENV', 'local')
+os.environ.setdefault("DJANGO_SETTINGS_MODULE", "isviz.settings.%s" % rack)
 
 application = get_wsgi_application()

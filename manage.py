@@ -1,11 +1,11 @@
 #!/usr/bin/env python
-"""Django's command-line utility for administrative tasks."""
 import os
 import sys
 
 
 def main():
-  os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'api.settings')
+  rack = os.environ.get('RACK_ENV', 'local')
+  os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'api.settings.%s' % rack)
 
   try:
     from django.core.management import execute_from_command_line
