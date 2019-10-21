@@ -11,3 +11,40 @@ services:
       - '80:8000'
     volumes:
       - .:/django
+    networks:
+      - backend
+    depends_on:
+      - redis
+      - database
+
+  redis:
+    container_name: redis
+    image: redis:5-alpine
+    hostname: redis
+    volumes:
+      - redis_data:/data
+    ports:
+      - '6379:6379'
+    networks:
+      - backend
+
+  database:
+    container_name: database
+    image: postgres:11-alpine
+    ports:
+      - '5432:5432'
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+    volumes:
+      - postgresql_data:/var/lib/postgresql/data
+      - ./tools/sql:/docker-entrypoint-initdb.d
+    networks:
+      - backend
+
+volumes:
+  redis_data:
+  postgresql_data:
+
+networks:
+  backend:
