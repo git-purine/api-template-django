@@ -16,6 +16,7 @@ pylint = "*"
 [packages]
 django = "*"
 djangorestframework = "*"
+drf-nested-routers = "*"
 boto3 = "*"
 psycopg2-binary = "*"
 ulid-py = "*"
